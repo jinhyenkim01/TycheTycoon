@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="com.qv.tyche_tycoon.SelectGameController"
+            prefHeight="600.0" prefWidth="1000.0">
+
+    <top>
+        <StackPane>
+            <padding>
+                <Insets top="10.0" bottom="10.0"/>
+            </padding>
+            <VBox alignment="CENTER" spacing="20">
+                <HBox spacing="100" alignment="CENTER">
+                    <Label fx:id="gameTitleLabel" style="-fx-font-size: 44px;"/>
+                </HBox>
+                <HBox spacing="150" alignment="CENTER"
+                      style="-fx-padding: 10; -fx-border-color: black; -fx-border-width: 2;"
+                      prefWidth="790" maxWidth="790">
+                    <Label fx:id="moneyLabel" style="-fx-font-size: 36px;"/>
+                    <Label fx:id="gamesPlayedLabel" style="-fx-font-size: 36px;"/>
+                </HBox>
+            </VBox>
+            <Button text="뒤로 가기" onAction="#returnMenu" style="-fx-font-size: 18px;" StackPane.alignment="TOP_RIGHT">
+                <StackPane.margin>
+                    <Insets right="20.0" top="10.0"/>
+                </StackPane.margin>
+            </Button>
+        </StackPane>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10">
+            <HBox spacing="20" alignment="TOP_CENTER">
+                <VBox alignment="CENTER" style="-fx-padding: 5; -fx-border-color: black; -fx-border-width: 2;"
+                      prefHeight="305.0" maxHeight="305.0" prefWidth="250" spacing="16">
+                    <Label text="쉬움" style="-fx-font-size: 28;"/>
+                    <Label fx:id="easyDescLabel" text="..." textAlignment="CENTER" wrapText="true"
+                           style="-fx-font-size: 18;"/>
+                    <Button fx:id="easyEnter" text="선택" onMouseEntered="#easyEnter" onMouseExited="#easyExit"
+                            onAction="#chooseEasy"
+                            style="-fx-font-size: 18px;" focusTraversable="false"/>
+                </VBox>
+
+                <VBox alignment="CENTER" style="-fx-padding: 5; -fx-border-color: black; -fx-border-width: 2;"
+                      prefHeight="305.0" maxHeight="305.0" prefWidth="250" spacing="16">
+                    <Label text="보통" style="-fx-font-size: 28;"/>
+                    <Label fx:id="normalDescLabel" text="..." textAlignment="CENTER" wrapText="true"
+                           style="-fx-font-size: 18;"/>
+                    <Button fx:id="normalEnter" text="선택" onMouseEntered="#normalEnter" onMouseExited="#normalExit"
+                            onAction="#chooseNormal"
+                            style="-fx-font-size: 18px;" focusTraversable="false"/>
+                </VBox>
+
+                <VBox alignment="CENTER" style="-fx-padding: 5; -fx-border-color: black; -fx-border-width: 2;"
+                      prefHeight="305.0" maxHeight="305.0" prefWidth="250" spacing="16">
+                    <Label text="어려움" style="-fx-font-size: 28;"/>
+                    <Label fx:id="hardDescLabel" text="..." textAlignment="CENTER" wrapText="true"
+                           style="-fx-font-size: 18;"/>
+                    <Button fx:id="hardEnter" text="선택" onMouseEntered="#hardEnter" onMouseExited="#hardExit"
+                            onAction="#chooseHard"
+                            style="-fx-font-size: 18px;" focusTraversable="false"/>
+                </VBox>
+            </HBox>
+            <VBox alignment="TOP_CENTER" spacing="20">
+                <HBox spacing="10" alignment="CENTER_LEFT"
+                      style="-fx-padding: 20; -fx-border-color: black; -fx-border-width: 2;"
+                      prefWidth="790" maxWidth="790" prefHeight="120" maxHeight="120">
+                    <Label fx:id="moneySpentLabel" style="-fx-font-size: 24px;" textAlignment="LEFT"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="info" style="-fx-font-size: 18px;" textAlignment="RIGHT"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

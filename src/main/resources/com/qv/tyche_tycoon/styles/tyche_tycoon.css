@@ -1,0 +1,11 @@
+@font-face {
+    src: url("../fonts/BMJUA_ttf.ttf");
+}
+
+.root {
+    -fx-font-family: "BM JUA";
+}
+
+.title-text {
+    -fx-font-size: 48px;
+}

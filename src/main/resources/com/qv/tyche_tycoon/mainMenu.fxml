@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="com.qv.tyche_tycoon.MainMenuController"
+            prefHeight="600.0" prefWidth="1000.0">
+    <top>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="10.0" bottom="10.0"/>
+            </padding>
+            <HBox spacing="100" alignment="CENTER">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TycheTycoon" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="BM JUA" size="50.0"/>
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="티케타이쿤" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="BM JUA" size="50.0"/>
+                    </font>
+                </Text>
+            </HBox>
+            <HBox spacing="150" alignment="CENTER"
+                  style="-fx-padding: 10; -fx-border-color: black; -fx-border-width: 2;"
+                  prefWidth="790" maxWidth="790">
+                <Label fx:id="moneyLabel" style="-fx-font-size: 36px;"/>
+                <Label fx:id="gamesPlayedLabel" style="-fx-font-size: 36px;"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10">
+            <HBox spacing="20" alignment="TOP_CENTER">
+                <VBox alignment="CENTER" style="-fx-padding: 20; -fx-border-color: black; -fx-border-width: 2;"
+                      prefHeight="250.0" maxHeight="250.0" prefWidth="250" spacing="20">
+                    <Label text="Lottery" style="-fx-font-size: 30;"/>
+                    <Label text="로또" style="-fx-font-size: 30;"/>
+                    <ImageView fitWidth="80" fitHeight="80" preserveRatio="true">
+                        <image>
+                            <Image url="@images/take-my-money.png"/>
+                        </image>
+                    </ImageView>
+                    <Button text="선택" onMouseEntered="#lottoEnter" onMouseExited="#lottoExit" onAction="#openLottery"
+                            style="-fx-font-size: 28px;" focusTraversable="false"/>
+                </VBox>
+
+                <VBox alignment="CENTER" style="-fx-padding: 20; -fx-border-color: black; -fx-border-width: 2;"
+                      prefHeight="250.0" maxHeight="250.0" prefWidth="250" spacing="20">
+                    <Label text="Dice Roll" style="-fx-font-size: 30;"/>
+                    <Label text="주사위" style="-fx-font-size: 30;"/>
+                    <ImageView fitWidth="80" fitHeight="80" preserveRatio="true">
+                        <image>
+                            <Image url="@images/perspective-dice-six-faces-one.png"/>
+                        </image>
+                    </ImageView>
+                    <Button text="선택" onMouseEntered="#diceEnter" onMouseExited="#diceExit" onAction="#openDice"
+                            style="-fx-font-size: 28px;" focusTraversable="false"/>
+                </VBox>
+
+                <VBox alignment="CENTER" style="-fx-padding: 20; -fx-border-color: black; -fx-border-width: 2;"
+                      prefHeight="250.0" maxHeight="250.0" prefWidth="250" spacing="20">
+                    <Label text="Horse Racing" style="-fx-font-size: 30;"/>
+                    <Label text="경마" style="-fx-font-size: 30;"/>
+                    <ImageView fitWidth="80" fitHeight="80" preserveRatio="true">
+                        <image>
+                            <Image url="@images/horse-head.png"/>
+                        </image>
+                    </ImageView>
+                    <Button text="선택" onMouseEntered="#raceEnter" onMouseExited="#raceExit" onAction="#openRacingHorse"
+                            style="-fx-font-size: 28px;" focusTraversable="false"/>
+                </VBox>
+            </HBox>
+            <VBox alignment="TOP_CENTER" spacing="20">
+                <HBox spacing="10" alignment="CENTER_LEFT"
+                      style="-fx-padding: 20; -fx-border-color: black; -fx-border-width: 2;"
+                      prefWidth="790" maxWidth="790" prefHeight="120" maxHeight="120">
+                    <Label fx:id="moneySpentLabel" style="-fx-font-size: 24px;" textAlignment="LEFT"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="info" style="-fx-font-size: 18px;" textAlignment="RIGHT"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

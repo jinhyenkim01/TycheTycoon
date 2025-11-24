@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="com.qv.tyche_tycoon.HowToPlayController"
+            prefHeight="600.0" prefWidth="1000.0">
+    <top>
+        <HBox alignment="CENTER" prefHeight="70">
+            <Label fx:id="title" text="..." textAlignment="CENTER" wrapText="true" style="-fx-font-size: 48;"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="40">
+            <HBox alignment="CENTER">
+                <Label fx:id="howToPlay" text="..." textAlignment="LEFT" wrapText="true" style="-fx-font-size: 20;"/>
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="90">
+            <Button fx:id="button" text="다음" onAction="#next" style="-fx-font-size: 24px;"/>
+        </HBox>
+    </bottom>
+</BorderPane>

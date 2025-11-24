@@ -409,7 +409,17 @@ public class SelectGameController {
   }
 
   private void loadDifficulty(Difficulty settings, ActionEvent event) throws Exception {
-    FXMLLoader loader = new FXMLLoader(getClass().getResource(selectedGame + ".fxml"));
+    String temp = "lottery.fxml";
+    if (selectedGame.equals("Lottery")) {
+      temp = "lottery.fxml";
+    }
+    if (selectedGame.equals("Dice")) {
+      temp = "dice.fxml";
+    }
+    if (selectedGame.equals("RacingHorse")) {
+      temp = "racingHorse.fxml";
+    }
+    FXMLLoader loader = new FXMLLoader(getClass().getResource(temp));
     Parent root = loader.load();
 
     Object controller = loader.getController();
